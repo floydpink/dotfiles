@@ -86,12 +86,18 @@ alias deploytravisweb="git checkout -b deploy-web; grunt web; rm -r -f node_modu
 
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 
-alias mongod="/E/Hari/Personal/tools/mongo/bin/mongod --dbpath /E/Hari/Personal/tools/mongo/data --rest"
+#alias mongod="/E/Hari/Personal/tools/mongo/bin/mongod --dbpath /E/Hari/Personal/tools/mongo/data --rest"
+alias mongod="/C/Program\ Files/MongoDB\ 2.6\ Standard/bin/mongod --config=\"/C/Program\ Files/MongoDB\ 2.6\ Standard/mongod.cfg\""
 
-alias mongo="/E/Hari/Personal/tools/mongo/bin/mongo"
+alias mongo="/C/Program\ Files/MongoDB\ 2.6\ Standard/bin/mongo"
+
 # added by travis gem
 [ -f c:/Users/Haridas/.travis/travis.sh ] && source c:/Users/Haridas/.travis/travis.sh
 
 alias s="git status"
 
 alias d="git diff"
+
+alias open="~/npp.bat"
+
+alias deletelong="start cmd.exe -K 'C:\Users\Haridas\bin\delete-too-long.bat'"
