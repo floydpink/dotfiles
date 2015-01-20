@@ -19,7 +19,9 @@ export CLICOLOR=1
 export LIBTOOLIZE=glibtoolize
 
 # Some auto-completion fun for git
-source ~/.git-completion.bash
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
 # serve - Start WEBrick here without caching
 function serve {
