@@ -4,16 +4,16 @@ PATH="/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/share/npm/bin:/usr/bin:/Us
 # history handling
 #
 # Erase duplicates
-export HISTCONTROL=ignoredups:erasedups
+HISTCONTROL=ignoreboth:erasedups
 # resize history size
-export HISTSIZE=5000
+HISTSIZE=5000
 # When the shell exits, append to the history file instead of overwriting it
 shopt -s histappend
 # do not store the 'clear' command
-export HISTIGNORE=clear
+HISTIGNORE=clear
 
 # After each command, append to the history file and reread it
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # make it colorful
 export CLICOLOR=1
