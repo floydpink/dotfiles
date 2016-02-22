@@ -66,7 +66,7 @@ fi
 
 eval "$(grunt --completion=bash)"
 
-. ~/z.sh
+. ~/bin/z.sh
 
 LS_COLORS='di=1;30:fi=0;32:ln=31:pi=5:so=5:bd=5:cd=5:or=35:mi=0:ex=31:*.rpm=90'
 export LS_COLORS
@@ -91,13 +91,12 @@ alias mongod="/C/Program\ Files/MongoDB\ 2.6\ Standard/bin/mongod --config=\"/C/
 
 alias mongo="/C/Program\ Files/MongoDB\ 2.6\ Standard/bin/mongo"
 
-# added by travis gem
-[ -f c:/Users/Haridas/.travis/travis.sh ] && source c:/Users/Haridas/.travis/travis.sh
-
 alias s="git status"
 
 alias d="git diff"
 
 alias open="~/npp.bat"
 
-alias deletelong="start cmd.exe -K 'C:\Users\Haridas\bin\delete-too-long.bat'"
+alias deletelong="start cmd.exe -K 'C:\Users\Hari\bin\delete-too-long.bat'"
+
+alias del="git ls-files -z -d | xargs -0 git rm --"
